@@ -1,8 +1,6 @@
 #!/usr/bin/env bash 
 
-
-virtualenv env ; 
-source env/bin/activate ;
+cd app ; 
 pipenv install ; 
 pip install -r requirements.txt ; 
 # Learn how to get your own free key here https://huggingface.co/docs/hub/security-tokens
@@ -16,6 +14,7 @@ cd app ;
 docker build -t streamlit . ; 
 docker run -p 8501:8501 streamlit ; 
 
-
+docker tag  streamlit:latest tiops/copilot-aws-architect-streamlit:latest ;
+docker push  tiops/copilot-aws-architect-streamlit:latest ;
 ###
 

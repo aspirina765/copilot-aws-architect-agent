@@ -1,0 +1,10 @@
+requests
+langchain
+transformers
+Pillow
+sentence_transformers
+faiss-cpu
+diagrams
+graphviz
+torch
+streamlit
